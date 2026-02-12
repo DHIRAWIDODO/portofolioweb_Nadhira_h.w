@@ -1,0 +1,254 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f5f5f5;
+  color: #111;
+  font-weight: 400;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 24px;                 /* agak turun */
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 128px); /* biar ada margin kanan kiri */
+  padding: 20px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e5e5e5;
+  backdrop-filter: blur(10px);
+
+  z-index: 100;
+}
+
+
+.logo {
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+}
+
+.navbar nav a {
+  margin-left: 32px;
+  text-decoration: none;
+  color: #111;
+  font-size: 14px;
+}
+
+/* OFFSET FIX */
+section {
+  scroll-margin-top: 120px;
+}
+
+/* HOME */
+.home {
+  min-height: 100vh;
+  padding: 0 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.home h1 {
+  font-size: clamp(72px, 10vw, 160px);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+/* ABOUT / PAPER */
+.paper {
+  background: #f5f5f5;
+  padding: 120px 64px;
+}
+
+.paper-inner {
+  background: #ffffff;
+  padding: 120px;
+}
+
+/* ABOUT CENTER LAYOUT */
+.paper-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* FOTO PROFILE (DI ATAS PERSONAL PROFILE) */
+.profile-photo {
+  width: 320px;
+  margin-bottom: 96px; /* JARAK FOTO KE TEKS */
+  overflow: hidden;
+}
+
+.profile-photo img {
+  width: 100%;
+  display: block;
+  filter: grayscale(10%);
+}
+
+/* HEADER PERSONAL PROFILE */
+.paper-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 64px;
+}
+
+.paper-header.center {
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 64px;
+}
+
+.role {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* TEXT PERSONAL PROFILE */
+.paper-text {
+  font-size: clamp(28px, 5vw, 56px);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* PROJECT */
+.project {
+  background: #0e0e10;
+  color: #ffffff;
+  padding: 120px 64px;
+}
+
+.section-title {
+  font-size: 18px;
+  margin-bottom: 64px;
+  display: inline-flex;
+  font-weight: 500;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 64px;
+}
+
+.project-image {
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  display: block;
+  transform: scale(1);
+  filter: brightness(1);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.project-card {
+  display: block;          /* biar seluruh card clickable */
+  text-decoration: none;   /* hilangin underline <a> */
+  color: inherit;          /* ikut warna putih */
+}
+
+.project-card:hover img {
+  transform: scale(1.02);
+  filter: brightness(0.85);
+}
+
+.project-card h3 {
+  margin-top: 24px;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+/* CONTACT */
+.contact {
+  background: #0e0e10;
+  padding: 0 64px 120px;
+}
+
+.contact-paper {
+  background: #111;
+  color: white;
+  padding: 120px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 80px;
+}
+
+.contact-left h2 {
+  font-size: 64px;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.contact-left p {
+  max-width: 420px;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* GLOBAL ARROW ANIMATION */
+.arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.arrow {
+  display: inline-block;
+  transform: rotate(-45deg);
+  transform-origin: center center; /* ROTATE DI TENGAH */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.arrow-link:hover {
+  color: #7dbbff;
+}
+
+.arrow-link:hover .arrow {
+  transform: rotate(0deg);
+  color: #7dbbff;
+} 
+
+/* FOOTER */
+.footer {
+  background: #0e0e10;
+  padding: 40px 64px;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 14px;
+  color: #ffffff;
+  opacity: 0.5;
+  font-weight: 400;
+}
